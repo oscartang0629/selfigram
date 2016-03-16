@@ -16,13 +16,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="BwJ-uV-fNj">
+                                <rect key="frame" x="210" y="110" width="180" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="Ddc-QC-0Gl"/>
+                                    <constraint firstAttribute="width" constant="180" id="qgU-r0-PnP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GG-ks-WKv">
+                                <rect key="frame" x="262" y="334" width="76" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="SFf-MX-bRj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbZ-SJ-0Iv">
+                                <rect key="frame" x="199" y="265" width="51" height="30"/>
+                                <state key="normal" title="camera"/>
+                                <connections>
+                                    <action selector="camerabuttonpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2JB-ZP-iQo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.25272293709999999" green="1" blue="0.27839012749999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BwJ-uV-fNj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="5wr-30-HPN"/>
+                            <constraint firstItem="bbZ-SJ-0Iv" firstAttribute="leading" secondItem="BwJ-uV-fNj" secondAttribute="leading" id="6h3-Uc-JdG"/>
+                            <constraint firstItem="bbZ-SJ-0Iv" firstAttribute="bottom" secondItem="BwJ-uV-fNj" secondAttribute="bottom" id="8EY-NP-qBh"/>
+                            <constraint firstItem="6GG-ks-WKv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ynv-26-O91"/>
+                            <constraint firstItem="6GG-ks-WKv" firstAttribute="top" secondItem="BwJ-uV-fNj" secondAttribute="bottom" constant="39" id="cj1-1N-hk4"/>
+                            <constraint firstItem="BwJ-uV-fNj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ooN-Xx-2jd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bqp-Wc-oER"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="BwJ-uV-fNj" id="1RL-It-2Rj"/>
+                        <outlet property="usernameLabel" destination="6GG-ks-WKv" id="Y2T-GW-4Xp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="657" y="356"/>
+            <point key="canvasLocation" x="633" y="330"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8cq-FR-PVI">
@@ -172,5 +209,6 @@
         <image name="Activities" width="25" height="25"/>
         <image name="NewsFeed" width="25" height="25"/>
         <image name="Selfigram-logo" width="93" height="21"/>
+        <image name="placeholder" width="256" height="256"/>
     </resources>
 </document>
